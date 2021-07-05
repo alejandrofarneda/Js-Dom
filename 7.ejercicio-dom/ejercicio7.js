@@ -36,7 +36,7 @@ body.innerHTML = `
         <img src="./forkme_right_darkblue_121621.png" class="corner" alt="Fork me on GitHub">
     </a>
     <footer class='footer'> RandomSquareRoom • copyright © 2021 
-    <a href="https://github.com/alejandrofarneda" target="_blank"> ale farneda</a> • original idea by 
+    <a href="https://www.linkedin.com/in/alejandro-farneda/" target="_blank"> ale farneda</a> • original idea by 
     <a href="https://hackaboss.com/" class='hab' target="_blank"> Hack-a-Boss </a></footer>
     </div>
 `;
@@ -165,7 +165,7 @@ setInterval(function () {
     changeColors(divItem);
 }, 483);
 
-//Quisiera lograr ésto para eliminar el elemento de la esquina cuando achico la pantalla: 
+//Quisiera lograr ésto para eliminar el elemento de la esquina cuando achico la pantalla:
 
 // const things = document.querySelector('.things');
 // console.log(things);

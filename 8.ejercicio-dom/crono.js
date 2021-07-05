@@ -26,7 +26,7 @@ const handleStart = function () {
         // Basicamente toma valores de start si es 0, declara una nueva fecha y trabajo sobre
         // los segundos de diferencia.
         // el modulo 60 (Second %60) servirá unicamente para lograr que cuando llegue a sesenta,
-        // vuelva a 0 lo que se muestra. 
+        // vuelva a 0 lo que se muestra.
         const go = function () {
             const now = +new Date();
             const dif = now - start;
@@ -89,7 +89,7 @@ const handleTakeLap = function () {
     let li = document.createElement('li');
     li.classList.add('.li');
     li.textContent = p.textContent;
-    lap.append(li);   
+    lap.append(li);
 };
 
 play.addEventListener('click', handleStart);
@@ -97,74 +97,41 @@ stop.addEventListener('click', handleStop);
 reset.addEventListener('click', handleReset);
 takeLap.addEventListener('click', handleTakeLap);
 
-
 //Varios errores en mi Css:
 
 const body = document.querySelector('body');
 body.style = `
-    display: grid;
-    
-    width: 100%;
-    min-width: 100vw;    
-    min-height: 100vw;
-      
-    padding: 0;
-    margin: 0;        
-    overflow: hidden;
-    box-sizing: border-box;
-    background-image: url("./9YKVj.jpg");    
-    background-size: 100% 100%;
-    background-repeat: no-repeat;    
-    border-color: inherit;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("./9YKVj.jpg");
+    background-repeat: no-repeat;
+    background-cover: cover;
+    `;
 
-    
-`;
 const all = document.querySelector('.all');
 
 all.style = `
-           
-    
-    
-    
-    
-   
-
+display: flex;
+flex-direction: column;
 `;
 
-const raton = document.querySelector('.corner');
-raton.style = `
-    height: 10vw;    
-    position: absolute;
-    text-align: right;
-    top: 0;
-    right: 0;
-    border: 0;
-    
-`;
-
-p.style = `    
-    position: absolute; 
-    text-align: center;
-    padding-left: 26vw;
-    padding-top: 13.5vw;
-    font-size: 9vw;    
+p.style = `
+    margin-top: 10rem;
+    font-size: 9vw;
     font-family: 'Orbitron', sans-serif;
     text-shadow: #B1B3BE 0.1em 0.1em 0.3em;
     letter-spacing: -8px;
-    
+
 `;
 
 const buttons = document.querySelector('.buttons');
 
 buttons.style = `
-    position: absolute; 
+   
     text-align: center;
-    padding-left: 19vw;
-    padding-top: 25vw; 
-    width: 61.8vw;
-    
-    
-    
+   
 
 `;
 
@@ -175,9 +142,8 @@ play.style = `
     text-shadow: black 0.1em 0.1em 1.5em;
     border-radius: 5px;
     background: #383836;
-    font-family: 'Play', sans-serif; 
+    font-family: 'Play', sans-serif;
     outline: none;
-    
 
 `;
 takeLap.style = `
@@ -187,8 +153,8 @@ takeLap.style = `
     text-shadow: black 0.1em 0.1em 1.5em;
     border-radius: 5px;
     background: #383836;
-    font-family: 'Play', sans-serif;  
-    outline: none; 
+    font-family: 'Play', sans-serif;
+    outline: none;
 `;
 stop.style = `
     height: 3vw;
@@ -197,7 +163,7 @@ stop.style = `
     text-shadow: black 0.1em 0.1em 1.5em;
     border-radius: 5px;
     background: #383836;
-    font-family: 'Play', sans-serif;  
+    font-family: 'Play', sans-serif;
     outline: none;
 `;
 reset.style = `
@@ -208,19 +174,18 @@ reset.style = `
     margin-right: 0.1vw;
     border-radius: 5px;
     background: #383836;
-    font-family: 'Play', sans-serif;  
-    outline: none; 
+    font-family: 'Play', sans-serif;
+    outline: none;
 `;
 const lapDiv = document.querySelector('.lapDiv');
 
 lapDiv.style = `
-    
-    position: absolute;
-     
-    font-size: 1.5vw;
-    margin-left: 5vw;
-    margin-top: 3vw;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 3rem;
+    flex-wrap: wrap; 
+    font-size: 1.5vw;    
     font-weight: bold;
     font-family: 'Play',sans-serif;
     color: black;
@@ -228,15 +193,25 @@ lapDiv.style = `
 
 `;
 
-lap.style = `    
-    max-height: 40vw;    
+lap.style = `
+    max-height: 20rem;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
     list-style: '-T: ';
     column-gap: 3vw;
     row-gap: 0.5vw;
-    
+
+`;
+
+const raton = document.querySelector('.corner');
+raton.style = `
+    height: 10vw;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    right: 0;
+    border: 0;
 
 `;
 
@@ -244,12 +219,11 @@ const footer = document.querySelector('.footer');
 
 footer.style = `
     position: absolute;
-    margin-left: 27.5vw;
-    margin-top: 45vw;
+    bottom: 2rem;
     display: block;
     color: #b4b4b4;
     text-align: center;
-    
+
     font-family: Verdana, "DejaVu Sans", sans-serif;
     font-weight: normal;
     font-size: 2vh;
